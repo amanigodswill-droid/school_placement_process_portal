@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Glory Schools Admissions process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+        .brand-bg {
+            background-color: #1E40AF;
+        }
+        .brand-text {
+            color: #1E40AF;
+        }
+        .soft-blue {
+            background-color: #E0F2FE; 
+        }
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }  
+     </style>
+     <body class="screen-container font-inter bg-gray-50 text-gray-800">
+        
+
+        <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100" id ="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 brand-bg rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-800">Good Glory Schools</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10" id="nav-menu">
+                <a href="index.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Home</a>
+                <a href="Profile.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Profile</a>
+                <a href="Schools.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Schools</a>
+                
+               <a href="Applies.html" id="apply-btn-bottom" class="bg-grey text-slate-800 px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 transition-transform inline-block">
+    Start Your Application
+</a>
+            </div>
+
+           
+        </div>
+    </nav>
+
+    <section class="relative min-h-[80vh] flex items-center overflow-hidden soft-blue fade">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-20">
+            <div class="z-10">
+                <p class="text-xs tracking-[0.2em] text-sky-600 font-bold mb-6 uppercase">Elevating Education</p>
+                <h1 class="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-8">
+                    Your journey to <br><span class="italic font-light text-slate-500">excellence</span> begins here.
+                </h1>
+                <p class="text-slate-600 text-xl mb-10 leading-relaxed max-w-lg">
+                    A curated admissions environment designed for clarity, prestige, and the pursuit of scholarly ambition.
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <button class="brand-bg text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all"id="apply-btn" class="brand-bg text-white ...">
+                        Apply Now
+                    </button>
+                   
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                <div class="absolute -top-20 -right-20 w-96 h-96 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
+                     alt="Modern Architecture" 
+                     class="rounded-[40px] shadow-2xl relative z-10 w-full h-[600px] object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6 fade">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&q=80&w=800" 
+                     alt="Workspace" 
+                     class="rounded-[30px] shadow-lg w-full aspect-square object-cover">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-4xl font-bold text-slate-800 mb-8">The Modern Library Concept</h2>
+                <p class="text-xl text-slate-600 leading-relaxed mb-10">
+                    We believe the admission process should feel like walking through a quiet, sun-drenched institution. We've removed the noise of standard applications to focus on what matters: your story.
+                </p>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full soft-blue flex items-center justify-center brand-text">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Curated Institutions</h3>
+                            <p class="text-slate-500">Only the most prestigious global schools integrated into one portal.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full soft-blue flex items-center justify-center brand-text">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Guided Excellence</h3>
+                            <p class="text-slate-500">Smart insights that help you craft a portfolio that truly stands out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 soft-blue fade">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-slate-800 mb-20">The Path to Enrollment</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 brand-bg text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-4">Curate Portfolio</h3>
+                    <p class="text-slate-500 leading-relaxed">Select your desired programs and upload your creative or academic work.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 brand-bg text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-4">Institutional Review</h3>
+                    <p class="text-slate-500 leading-relaxed">Your profile is reviewed by our elite network of academic partners.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 brand-bg text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-4">Final Enrollment</h3>
+                    <p class="text-slate-500 leading-relaxed">Receive your invitation and begin your journey at your chosen institution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6 fade">
+        <h2 class="text-3xl font-bold text-center text-slate-800 mb-16">Voices of the Good Glory Schools</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="https://i.pravatar.cc/150?u=margot" class="w-14 h-14 rounded-2xl object-cover" alt="User">
+                    <div>
+                        <p class="font-bold text-slate-900 text-lg">Margot Archer</p>
+                        <p class="text-xs text-sky-600 font-bold uppercase tracking-wider">Design Graduate, 2023</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic text-lg leading-relaxed">"The platform felt like an extension of the creative process. It was the first time an application felt like a dialogue rather than a chore."</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="https://i.pravatar.cc/150?u=julian" class="w-14 h-14 rounded-2xl object-cover" alt="User">
+                    <div>
+                        <p class="font-bold text-slate-900 text-lg">Julian Kempler</p>
+                        <p class="text-xs text-sky-600 font-bold uppercase tracking-wider">Architecture Student</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic text-lg leading-relaxed">"Everything is so calm. In a stressful time like university applications, Good Glory Schools was my sanctuary."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 fade">
+        <div class="max-w-5xl mx-auto brand-bg rounded-[60px] p-12 md:p-24 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8">Ready to curate your future?</h2>
+                <p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto">Join 5,000+ students who have found their perfect academic match through our serene admission portal.</p>
+                <button class="bg-blue-600 text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 transition-transform" id="apply-btn">
+                    Start Your Application
+                </button>
+            </div>
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 text-center">
+        <p class="text-slate-400 text-sm">© 2023 Good Glory Schools. All rights reserved.</p>
+    </footer>
+    <script src="node.js"></script>
+
+</body>
+</html>

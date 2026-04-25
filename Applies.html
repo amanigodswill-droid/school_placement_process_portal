@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Document</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+      :root {
+     --bg-color: #f8fbfe;
+            --card-bg: #e1f3ff;
+            --primary-text: #2d4a5c;
+            --secondary-text: #5a7d91;
+            --accent-blue: #4a90e2;
+            --input-bg: #ffffff;
+            --border-radius: 16px;
+            --success-green: #00897b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            min-height: 100vh;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+       
+    
+        h1 { font-size: 2rem; margin-bottom: 15px; }
+        .description { color: var(--secondary-text); margin-bottom: 30px; }
+
+        .section-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            float: right;
+            background: white;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+        }
+
+        .label-group { margin-bottom: 15px; }
+        label { 
+            display: block; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            color: var(--secondary-text);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: var(--input-bg);
+            font-size: 1rem;
+            color: var(--primary-text);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-box {
+            background: #d1e9ff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+
+        .doc-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .check-circle {
+            width: 18px;
+            height: 18px;
+            background: var(--success-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.6rem;
+        }
+
+        .footer-nav {
+            margin-top: auto;
+            padding-top: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-back {
+            background-color: var(--accent-blue);
+            border: none;
+            font-weight: bold;
+            color: var(--primary-text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 12px 20px;
+            border-radius: 10px;
+        }
+
+        .btn-continue {
+            flex-grow: 1;
+            background: #3e5261;
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+            
+        
+             .level-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .level-option {
+            padding: 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 10px;
+            background: white;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .level-option.active {
+            background-color: #d1e9f2;
+            border-color: #adc6d9;
+            color: var(--accent-blue);
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .discard-btn {
+            background: #3e5261;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding : 15px;
+             border-radius: 12px;
+             width: 100%;
+             border: 1px solid var(--input-border);
+        }
+
+        .save-btn {
+            background: #3e5261;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding : 15px;
+             border-radius: 12px;
+             width: 100%;
+             border: 1px solid var(--input-border);
+        }
+        .cam-icon {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.cam-icon:hover {
+    transform: scale(1.1);
+}
+ .Profile {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .profile-pic-container {
+            position: relative;
+            width: 100px;
+            margin: 10px 20px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .cam-icon {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            background: #546e7a;
+            color: white;
+            padding: 5px;
+            border-radius: 8px;
+            font-size: 12px;
+            border: 2px solid white;
+        }
+           
+        
+</style>
+<body class="screen-container" style="font-family: 'Inter', sans-serif; background-color: #E0F2FE; color: #1E40AF; padding: 20px;">
+    <div class="application-document">
+        
+    
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 brand-bg rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-800"> Good Glory Schools </span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <a href="index.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Home</a>
+                <a href="Profile.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Profile</a>
+                <a href="Schools.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Schools</a>
+                
+                 <a href="Applies.html" id="apply-btn-bottom" class="bg-grey text-slate-800 px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 transition-transform inline-block">
+    Start Your Application
+</a>
+            </div>
+
+           
+        </div>
+    </nav>
+
+
+
+<div class="container">
+    <div class="header">
+        <div class="logo"> Good Glory Schools</div>
+        <div style="font-size: 24px;"></div>
+    </div>
+
+    
+
+    <h1>Academic Excellence</h1>
+    <p class="description">Provide your primary and secondary education performance details. We use this data to curate your eligibility.</p>
+
+    <div class="section-card">
+        <div class="section-box">
+        <div class="section-title"> Personal Information</div>
+
+        <i class="fas fa-user"></i>
+        <div class="Profile">
+        <span style="font-weight: bold; color: var(--text-main);">Edit Profile</span>
+    </div>
+
+    <div class="profile-pic-container">
+        <input type="file" id="upload" style="display:none" accept="image/*">
+        <img src="https://via.placeholder.com/100" alt="Profile" class="profile-pic">
+        <div class="cam-icon">
+            <i class="fas fa-camera"></i>
+        </div>
+        
+    </div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input id="fullName" type="text" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input id="dateOfBirth" type="date" placeholder="Select date">
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <select id="gender">
+                <option>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Nationality</label>
+            <input id="nationality" type="text" placeholder="Enter your nationality">
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-title"> Academic Status</div>
+        <label>Current Level</label>
+        <div class="level-selector">
+            <div class="level-option">KCPE</div>
+            <div class="level-option">KCSE</div>
+        </div>
+        <div class="form-group" style="margin-top:15px;">
+            <label>Expected Graduation Year</label>
+            <input id="graduationYear" type="number" placeholder="e.g. 2025">
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-title"> Contact Details</div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input id="email" type="email" placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input id="phone" type="text" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label>Physical Address</label>
+            <textarea id="physicalAddress" style="width:100%; border-radius:10px; border:1px solid #e1e8ed; padding:10px; height:60px;" placeholder="Enter your physical address"></textarea>
+        </div>
+    </div>
+
+    
+        <span class="badge">Verified Input</span>
+        <h3>Primary Education (KCPE)</h3>
+        <p style="font-size: 0.8rem; margin-bottom: 15px;">Kenya Certificate of Primary Education results</p>
+        
+        <div class="label-group">
+            <label>School Name</label>
+            <input id="schoolName" type="text" placeholder="e.g. Nairobi Primary School">
+        </div>
+
+        <div class="grid-2">
+            <div class="label-group">
+                <label>Year of Completion</label>
+                <select id="yearOfCompletion">
+                    <option>Select Year</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                </select>
+            </div>
+            <div class="label-group">
+                <label>Mean Score (/500)</label>
+                <input id="meanScore" type="number" placeholder="e.g. 350">
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card">
+        <h3>Secondary Education (KCSE)</h3>
+        <div class="label-group" style="margin-top:15px;">
+            <label>Secondary School Name</label>
+            <input id="secondarySchoolName" type="text" placeholder="e.g. Alliance High School">
+        </div>
+
+        <div class="grid-2">
+            <div class="label-group">
+                <label>English Grade</label>
+                <select id="english-grade">
+                    <option>Select Grade</option>
+                    <option>A</option>
+                    <option>A-</option>
+                    <option>B+</option> 
+                    <option>B</option>
+                    <option>B-</option>
+                    <option>C+</option>
+                    
+
+
+                </select>
+            </div>
+            <div class="label-group">
+                <label>Mathematics Grade</label>
+                <select id="math-grade">
+                    <option>Select Grade</option>
+                    <option>A</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B</option>
+                    <option>B-</option>
+                    <option>C+</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <div style="font-size: 24px;"></div>
+        <div>
+            <strong>Did you know?</strong>
+            <p style="font-size: 0.85rem; margin-top: 5px;">Students with an A in Mathematics are eligible for our accelerated Engineering Atelier program.</p>
+        </div>
+    </div>
+
+    <div class="section-card" style="background: #eef8ff;">
+        <h4 style="font-size: 0.8rem; color: #4a6a8a; margin-bottom: 15px; letter-spacing: 1px;">REQUIRED DOCUMENTS</h4>
+        <div class="doc-item">
+            <div class="check-circle"></div>
+            KCPE Result Slip
+        </div>
+        <div class="doc-item">
+            <div class="check-circle"></div>
+            KCSE Certificate
+        </div>
+        <div class="doc-item">
+            <div class="check-circle"></div>
+            Birth Certificate
+        </div>
+    </div>
+
+        <div class="footer">
+        <button class="discard-btn">Discard Changes</button>
+        <button class="save-btn">Save Changes</button>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

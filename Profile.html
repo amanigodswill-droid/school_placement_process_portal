@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #E0F2FE;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #1E40AF;
+        }
+
+        .value {
+            background: #f0f7ff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100" id ="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 brand-bg rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-800">Good Glory Schools</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10" id="nav-menu">
+                <a href="index.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Home</a>
+                <a href="Profile.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Profile</a>
+                <a href="Schools.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Schools</a>
+                
+               <a href="Applies.html" id="apply-btn-bottom" class="bg-grey text-slate-800 px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 transition-transform inline-block">
+    Start Your Application
+</a>
+            </div>
+
+        
+        </div>
+    <div class="container">
+        <h1 class="text-2xl font-bold mb-4">Student Profile</h1>
+
+        <img id="profilePic" class="profile-pic" src="https://via.placeholder.com/100">
+
+        <div class="field">
+            <div class="label">Full Name</div>
+            <div id="fullName" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Date of Birth</div>
+            <div id="dob" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Gender</div>
+            <div id="gender" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Nationality</div>
+            <div id="nationality" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Level</div>
+            <div id="level" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Graduation Year</div>
+            <div id="graduationYear" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Email</div>
+            <div id="email" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Phone</div>
+            <div id="phone" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Address</div>
+            <div id="address" class="value"></div>
+        </div>
+
+        <hr class="my-4">
+
+        <h2 class="font-bold">KCPE</h2>
+        <div class="field">
+            <div class="label">School</div>
+            <div id="schoolName" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Year</div>
+            <div id="yearOfCompletion" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Mean Score</div>
+            <div id="meanScore" class="value"></div>
+        </div>
+
+        <hr class="my-4">
+
+        <h2 class="font-bold">KCSE</h2>
+        <div class="field">
+            <div class="label">School</div>
+            <div id="secondarySchool" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">English</div>
+            <div id="englishGrade" class="value"></div>
+        </div>
+        <div class="field">
+            <div class="label">Math</div>
+            <div id="mathGrade" class="value"></div>
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

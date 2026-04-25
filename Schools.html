@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Schools Recommended</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+   
+    :root {
+            --bg-color: #f8fbfe;
+            --primary-text: #2d4a5c;
+            --secondary-text: #5a7d91;
+            --accent-dark: #3e5261;
+            --card-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            --border-radius: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .screen-container {
+            width: 100%;
+            max-width: 2000px;
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        /* Top Header */
+        .header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ffe0d3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: #4c6a7d;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 0 20px;
+        }
+
+        .phase-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #aab8c2;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        
+        .pill {
+            padding: 12px 20px;
+            border-radius: 30px;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid #eee;
+            background: white;
+            color: var(--secondary-text);
+        }
+
+        .pill.active {
+            background: var(--accent-dark);
+            color: white;
+            border-color: var(--accent-dark);
+            box-shadow: 0 4px 12px rgba(62, 82, 97, 0.3);
+        }
+
+    
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px solid #f0f4f7;
+        }
+
+        .card-img {
+            width: 90%;
+            height: 900px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .rating-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: #72a1b1;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn-details {
+            width: 100%;
+            padding: 16px;
+            border-radius: 18px;
+            border: 2px solid #f0f4f7;
+            background: white;
+            color: var(--accent-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-details.dark {
+            background: var(--accent-dark);
+            color: white;
+            border: none;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 100px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.02);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: #aab8c2;
+            text-transform: uppercase;
+            gap: 5px;
+        }
+
+        .nav-item.active {
+            color: #72a1b1;
+        }
+
+        .nav-icon {
+            font-size: 1.4rem;
+        }
+
+    </style>
+<body class="screen-container">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 brand-bg rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-800">Good Glory Schools</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <a href="index.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Home</a>
+                <a href="Profile.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Profile</a>
+                <a href="Schools.html" class="text-sm font-medium hover:text-sky-600 transition-colors">Schools</a>
+                <a class="bg-grey text-slate-800 px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 
+            transition-transform inline-block" href="Applies.html">Start your application</a></li>
+            </div>
+
+        
+        </div>
+    </nav>
+
+<div class="screen-container">
+    <div class="header">
+        <div class="user-profile"></div>
+        <div class="brand-name">GOOD GLORY SCHOOLS</div>
+        <div style="font-size: 22px;"></div>
+    </div>
+
+    <div class="content">
+        <div class="phase-label">Discovery Phase</div>
+        <h1>Available Institutions</h1>
+
+       
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('erika-fletcher-MZxqc6n9qCw-unsplash.jpg');">
+                <div class="rating-badge">★ 4.9</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title">St. Andrews International Academy</div>
+                <div class="location"> Edinburgh, United Kingdom</div>
+                <button class="btn-details dark">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80');">
+                <div class="rating-badge">★ 4.7</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title">Heritage Collegiate Institute</div>
+                <div class="location"> Boston, Massachusetts</div>
+                <button class="btn-details dark">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=800&q=80');">
+                <div class="rating-badge">★ 4.8</div>
+            </div>
+            <div class="card-body">
+                <div class="card-title">Novus Technical School</div>
+                <div class="location"> Singapore</div>
+                <button class="btn-details dark">View Details</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
